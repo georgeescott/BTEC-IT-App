@@ -1,0 +1,201 @@
+@charset "utf-8";
+/*
+ * Responsive Navigation Panel v1.0.0 - By George Escott
+ */
+
+/* viewport cuts off any overflow and enables hardware acceleration for smooth animations */
+#viewport {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+	background: inherit;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;}
+
+#content {height: 100%;}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 46px;
+	top: 0;
+	left: 0;
+	line-height: 2.9;
+	text-align: center;
+	z-index: 99;}
+
+/* the panel toggle to open the panel */
+header .panel-toggle {
+	position: absolute;
+	height: 46px;
+	min-width: 40px;
+	padding: 0 10px 0 10px;
+	top: 0;
+	left: 5px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+/* if the panel toggle is an icon */
+header .panel-toggle[class^="icon-"],
+header .panel-toggle[class*=" icon-"]{
+	line-height: 1.8;
+	text-align: center;
+	font-size: 25px;
+	color: #FFFFFF;
+	cursor: pointer;}
+
+/* the panel */
+nav.panel {
+	position: absolute;
+	float: left;
+	width: 270px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: hidden;}
+
+/* panel list */
+nav.panel ul {height: auto;}
+
+/* panel list items */
+nav.panel ul li {
+	display: block;
+	height: 46px;
+	line-height: 1.3;
+	font-size: 0.9rem;}
+
+/* panel list item hyperlinks */
+nav.panel ul li a {
+	width: 250px;
+	padding: 13px 33px 13px 15px;}
+
+nav.panel ul li.search {padding: 9px 40px 9px 15px;}
+
+nav.panel ul li.search  input[type="text"],
+nav.panel ul li.search  input[type="search"]{
+	min-height: 25px;
+	padding: 2px 8px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;}
+
+nav.panel ul li.title {
+	height: auto;
+	padding: 13px 0 5px 15px;
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	font-weight: 400;}
+
+nav.panel ul li.footer {
+	padding: 13px 0 13px 15px;
+	line-height: 1.9;
+	font-size: 0.7rem;
+	font-weight: 400;}
+
+nav.panel ul li.footer a {
+	display: inline;
+	width: auto;
+	padding: 0;
+	border: 0;}
+
+/* opening/closing the panel */
+/* set starting/finishing point to prevent glitches or lag */
+.panel-slide {
+	background-color: inherit;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+	-o-transform: translate(0,0);
+	-ms-transform: translate(0,0);}
+
+/* make the fixed header unfixed while the panel is open to improve the UX */
+body.panel-open header,
+body.panel-closed header {position: absolute;}
+
+/* show the panel when its open, hide when not so first load flash is prevented */
+body.panel-open nav.panel,
+body.panel-closed nav.panel {visibility: visible;}
+
+/* move the content right when opened to show the panel */
+body.panel-open .panel-slide {
+	transform: translate(250px,0);
+	-webkit-transform: translate(250px,0);
+	-moz-transform: translate(250px,0);
+	-o-transform: translate(250px,0);
+	-ms-transform: translate(250px,0);
+
+	animation: open-panel .5s ease-in-out;
+	-webkit-animation: open-panel .5s ease-in-out;
+	-moz-animation: open-panel .5s ease-in-out;
+	-o-animation: open-panel .5s ease-in-out;
+	-ms-animation: open-panel .5s ease-in-out;}
+
+/* move the content left when closed to hide the panel */
+body.panel-closed .panel-slide {
+	animation: close-panel .35s ease-in-out;
+	-webkit-animation: close-panel .35s ease-in-out;
+	-moz-animation: close-panel .35s ease-in-out;
+	-o-animation: close-panel .35s ease-in-out;
+	-ms-animation: close-panel .35s ease-in-out;}
+
+/* animations */
+/* open nav */
+@keyframes open-panel {
+	0%		{transform: translate(0,0);}
+	70%		{transform: translate(270px,0);}
+	100%	{transform: translate(250px,0);}
+}
+
+@-webkit-keyframes open-panel {
+	0%		{-webkit-transform: translate(0,0);}
+	70%		{-webkit-transform: translate(270px,0);}
+	100%	{-webkit-transform: translate(250px,0);}
+}
+
+@-moz-keyframes open-panel {
+	0%		{-moz-transform: translate(0,0);}
+	70%		{-moz-transform: translate(270px,0);}
+	100%	{-moz-transform: translate(250px,0);}
+}
+
+@-o-keyframes open-panel {
+	0%		{-o-transform: translate(0,0);}
+	70%		{-o-transform: translate(270px,0);}
+	100%	{-o-transform: translate(250px,0);}
+}
+
+@-ms-keyframes open-panel {
+	0%		{-ms-transform: translate(0,0);}
+	70%		{-ms-transform: translate(270px,0);}
+	100%	{-ms-transform: translate(250px,0);}
+}
+
+/* close nav */
+@keyframes close-panel {
+	0%		{transform: translate(250px,0);}
+	100%	{transform: translate(0,0);}
+}
+
+@-webkit-keyframes close-panel {
+	0%		{-webkit-transform: translate(250px,0);}
+	100%	{-webkit-transform: translate(0,0);}
+}
+
+@-moz-keyframes close-panel {
+	0%		{-moz-transform: translate(250px,0);}
+	100%	{-moz-transform: translate(0,0);}
+}
+
+@-o-keyframes close-panel {
+	0%		{-o-transform: translate(250px,0);}
+	100%	{-o-transform: translate(0,0);}
+}
+
+@-ms-keyframes close-panel {
+	0%		{-ms-transform: translate(250px,0);}
+	100%	{-ms-transform: translate(0,0);}
+}

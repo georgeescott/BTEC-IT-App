@@ -1,0 +1,77 @@
+########################
+## Generic .gitignore
+########################
+
+# Folders
+[Ee]xpress/
+$RECYCLE.BIN/
+platforms/
+bin/
+tmp/
+ClientBin/
+nbproject/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Thumbnail cache files
+._*
+Thumbs.db
+ehthumbs.db
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Log Files
+*.log
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace and project files for sublime text
+*.sublime-workspace
+# *.sublime-project
+
+# sftp configuration file
+sftp-config.json
+
+# Dropbox File
+.dropbox
+
+# Other Temporary Files
+*.cache
+*.tmp
+*.tmp_proj
+*.tmproj
+*.dbmdl
+*.[Pp]ublish.xml
+*.pfx
+*.publishsettings
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.esproj
+.project
+.metadata
+.settings
+.idea
+[Ss]tyle[Cc]op.*
+~$*
+*~
