@@ -6,9 +6,13 @@
 /* viewport cuts off any overflow and enables hardware acceleration for smooth animations */
 #viewport {
 	position: relative;
-	min-height: 100%;
 	overflow: hidden;
-	background: inherit;
+	background: inherit;}
+
+/* fixes a backface visibility bug for android - issue #1 */
+#viewport,
+#content {
+	min-height: 100%;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
