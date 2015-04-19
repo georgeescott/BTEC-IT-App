@@ -1,0 +1,379 @@
+@charset "utf-8";
+/*
+ * Reset (includes IE legacy support) v1.0.0 - By George Escott
+ */
+
+html, body, div, span, section,
+header, footer, article, aside, nav, menu,
+iframe, canvas, object, embed, area, map,
+audio, video, param, figure, figcaption, img,
+h1, h2, h3, h4, h5, h6, p, a, b, i, u,
+strong, small, sub, sup, del, s, ins, mark, dfn, em,
+dl, dt, dd, ol, ul, li,
+blockquote, q, cite, pre, code, samp, kbd, var, ruby,
+form, fieldset, legend, label,
+input, textarea, select, button, progress, meter, keygen,
+output, time, address, abbr, details, summary, hr,
+table, thead, tbody, tfoot, tr, th, td,
+col, colgroup, caption {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	vertical-align: baseline;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;}
+
+/* make sure elements display correctly - display property */
+a, b, i, u, strong, small, sub, sup, del, s, ins, mark, dfn, em {display: inline;}
+
+div, h1, h2, h3, h4, h5, h6, dl, dt, dd, ol, ul, li,
+blockquote, pre, code, samp, kbd, var, ruby,
+form, fieldset, legend, progress {display: block;}
+
+span, section, header, footer, article, aside, nav, menu,
+iframe, canvas, object, embed, area, map,
+audio, video, param, figure, figcaption, img, p,
+nav ul li, nav ol li, nav ul li a, nav ol li a,
+label, input, textarea, select, button, progress, meter, keygen,
+output, time, address, details, summary, hr {display: inline-block;}
+
+/* removes excess borders in IE & opera */
+iframe, form, fieldset, img, input[type="color"]{border: 0;}
+
+/* removes excess outlines in IE & opera */
+:active, :focus {outline: 0;}
+
+/* restore outlines to a and buttons */
+input[type="file"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+html input[type="button"]:focus,
+button:focus,
+a:focus {outline: thin dotted;}
+
+/* reset firefox buttons */
+input[type="file"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+html input[type="button"]::-moz-focus-inner,
+button::-moz-focus-inner,
+::-moz-focus-inner {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;}
+
+/* make sure hidden elements are hidden */
+[hidden], input[type="hidden"], template {display: none !important;}
+
+/* correct cursor for disabled elements */
+[disabled] {
+	cursor: default !important;
+	pointer-events: none;}
+
+/* make sure audio has its controls
+   make iOS not add extra height */
+audio:not([controls]) {
+    height: 0;
+    display: none;}
+
+/* fix SVG in IE */
+svg:not(:root){overflow: hidden;}
+
+/* make sure html and body take up the viewport */
+html, body {
+	width: 100%;
+	height: 100%;}
+
+/* set default font styles */
+html {
+	line-height: normal;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+	color: #000000;
+	background-color: #FFFFFF;}
+
+body {
+	font-size: 1em;
+	font-size: 1rem;
+	background: inherit;}
+
+/* responsive/full width elements */
+div,
+section,
+header,
+footer,
+iframe,
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;}
+
+/* headings */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-weight: 700;
+	margin: 0 0 0.25rem 0;}
+	
+h1, .h1 {font-size: 2rem;}
+h2, .h2 {font-size: 1.8rem;}
+h3, .h3 {font-size: 1.65rem;}
+h4, .h4 {font-size: 1.45rem;}
+h5, .h5 {font-size: 1.25rem;}
+h6, .h6 {font-size: 1.05rem;}
+
+/* styling text tags */
+p {margin: .25rem 0;}
+b, strong {font-weight: 700;}
+i	{font-style: italic;}
+u	{text-decoration: underline;}
+small {font-size: 80%;}
+
+/* hyperlinks */
+a {	text-decoration: none;
+	background: transparent;
+	word-break: break-word;
+	cursor: pointer;}
+
+a:hover {text-decoration: underline;}
+
+/* sup and sub */
+sub,
+sup {
+	position: relative;
+	line-height: 0;
+	vertical-align: baseline;
+	font-size: 75%;}
+
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* image */
+img {vertical-align: middle;}
+
+/* styling hr */
+hr {height: 0;
+	width: 100%;
+	margin: 1em 0;
+	clear: both;}
+
+/* underline abreviation */
+abbr[title] {border-bottom: 1px dotted;}
+
+/* style highlighted text */
+mark {
+	background-color: #FF0;
+	color: #000;}
+
+/* strikethrough text*/
+del {text-decoration: line-through;}
+
+/* fix definition styling */
+dfn {font-style: italic;}
+
+/* restore default padding and margin to lists*/
+menu, dd, ul, ol {padding: 0 0 0 40px;}
+
+menu, dl, ul, ol {margin: 1em 0;}
+
+/* fix navigation styling */
+nav ul,
+nav ol {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	list-style-image: none;}
+
+nav ul li,
+nav ol li {
+	height: 100%;
+	vertical-align: top;
+	text-overflow: ellipsis;}
+
+nav ul li a,
+nav ol li a {height: 100%;}
+
+nav a:hover {text-decoration: none;}
+
+/* style code */
+code,
+kbd,
+pre,
+samp {font-family: monospace, serif;}
+
+code, pre {padding: 10px 10px 10px 15px;}
+
+code ol, pre ol {
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	margin: 0 -10px 0 -15px;}
+
+code ol li, pre ol li {
+	padding: 1px 0;
+	list-style-position: inside;
+	text-indent: 10px;}
+
+/* improve readibility */
+pre {
+	white-space: pre;
+	white-space: pre-wrap;}
+
+/* quote tag */
+q {	quotes: "\201C" "\201D";}
+q:before {margin: 0 2px 0 0;}
+q:after {margin: 0 0 0 2px;}
+
+/* blockquote */
+blockquote cite {
+	font-style: italic;
+	font-weight: 400;}
+
+blockquote cite:before {content: "\002D" " ";}
+
+/* windows 8 canvas */
+canvas {-ms-touch-action: double-tap-zoom;}
+
+/* tables */
+table {
+	width: 100%;
+	max-width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0;}
+
+table thead th, table tbody td {
+	padding: 6px 10px;
+	vertical-align: middle;
+	border: 1px solid #000000;}
+
+table thead th {font-weight: bold;}
+
+/* form elements */
+/* make sure label fits well with inputs */
+label {
+	vertical-align: top;
+	margin: 0 5px;}
+
+/* correct alignment */
+legend {white-space: normal;}
+
+/* prevent buttton and select from inheriting text-transform */
+button, select {text-transform: none;}
+
+/* style inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"]{
+	width: 100%;
+	max-width: 100%;
+	height: 30px;
+	padding: 2px 5px;
+	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
+	font: inherit;
+	background-color: #FFFFFF;}
+
+/* style textarea correctly */
+textarea {
+	width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	padding: 2px 5px;
+	vertical-align: top;
+	font: inherit;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	resize: vertical;
+	-moz-resize: vertical;
+	overflow: auto;}
+
+/* style inputs correctly */
+input[type="file"],
+input[type="color"],
+input[type="range"]{
+	width: 100%;
+	max-width: 100%;
+	font: inherit;}
+
+input[type="color"] {
+	min-height: 30px;}
+
+/* fixing search appearance in webkit */
+input[type="search"],
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;}
+
+/* fix webkit's border radius on buttons & search */
+input[type="search"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	border-radius: 0;
+	-webkit-border-radius: 0;}
+
+/* checkbox and radio */
+input[type="checkbox"],
+input[type="radio"] {
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	text-align: left;
+	cursor: pointer;}
+
+/* select */
+select {
+	width: 100%;
+	max-width: 100%;
+	min-height: 30px;
+	padding: 2px 5px;
+	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
+	text-align: left;
+	font: inherit;
+	border-width: 1px;}
+
+/* buttons */
+input[type="submit"],
+input[type="reset"],
+html input[type="button"],
+button {
+	padding: 4px 8px;
+	vertical-align: middle;
+	text-align: center;
+	font: inherit;
+	appearance: button;
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	-o-appearance: button;
+	-ms-appearance: button;
+	cursor: pointer;}
