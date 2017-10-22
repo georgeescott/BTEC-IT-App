@@ -1,7 +1,7 @@
 ## Richard Huish College BTEC IT App
 
-[![Download on the App Store](https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)](https://itunes.apple.com/gb/app/btec-it-richard-huish-college/id735468253)
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](https://play.google.com/store/apps/details?id=com.benbenapps.btecit)
+[![Download on the App Store](https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)](https://itunes.apple.com/gb/app/btec-it-richard-huish-college/id735468253)
+[![Get it on Google Play](https://play.google.com/intl/en_gb/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.benbenapps.btecit)
 
 The Richard Huish College BTEC IT App has been created for students who are considering taking the BTEC IT course at Richard Huish College. It provides them with some hands-on experience working with the markup, styling and programming languages that they will learn and use throughout the course.
 
